@@ -25,6 +25,8 @@
   - Full LMS implementation.
   - Auth, dashboard, forms, payment, or backend.
 - Success signals:
+  - Workshop proof wall includes verified GitHub repo links, not generic claims.
+  - Discord index/mirror artifacts are visible as curriculum evidence.
   - Page is readable on mobile and desktop.
   - Public safety scan passes.
   - GitHub Pages URL returns 200 and correct title.
@@ -44,6 +46,7 @@
 - Primary navigation: Promise, Path, Proof, Principles.
 - Core routes/screens: one static page with anchored sections.
 - Content hierarchy:
+  - Hero → scoped numbers → curriculum path → workshop proof wall → Discord index → principles → contest/deploy note.
   1. Hero: what Oracle School is.
   2. Metrics: labeled scope to prevent 772 vs 653 confusion.
   3. Path: learning journey.
@@ -66,7 +69,9 @@
 
 ## Components
 - Existing components to reuse: static sections, cards, stat blocks, CTA links.
-- New/changed components: skip link, proof chips, scoped metric cards, lens notes.
+- New/changed components:
+  - Workshop repo card grid with direct GitHub links.
+  - Discord index evidence cards with message/channel/attachment counts. skip link, proof chips, scoped metric cards, lens notes.
 - Variants and states: focus-visible, hover, mobile wrapping, reduced motion.
 - Token/component ownership: CSS variables in `index.html` for this static prototype.
 
@@ -93,7 +98,8 @@
 ## Content voice
 - Tone: concise, grounded, bilingual where useful.
 - Terminology: Oracle, memory loop, proof-first, Rule 6, build/scan/deploy.
-- Microcopy rules: label metric scope; avoid inflated claims.
+- Microcopy rules:
+  - Use numbers only with scope and source; avoid “we did many workshops” without repo/artifact links. label metric scope; avoid inflated claims.
 
 ## Implementation constraints
 - Framework/styling system: no build dependencies; plain HTML/CSS.
